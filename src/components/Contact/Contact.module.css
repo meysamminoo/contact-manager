@@ -1,0 +1,37 @@
+.contact {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7f7f7;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.contactDetail {
+  display: flex;
+}
+.contact img {
+  width: 4rem;
+  height: auto;
+  margin-right: 10px;
+}
+.textBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.contact button {
+  background-color: #dc143c;
+  color: #fff;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  transition: all 0.4s ease;
+}
+.contact button:hover {
+  background-color: #fff;
+  color: #dc143c;
+  border: 1px solid #dc143c;
+}
