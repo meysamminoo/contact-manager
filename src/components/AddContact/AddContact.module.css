@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   width: 800px;
+  border-bottom: 1px solid #ccc;
 }
 .form button {
   background-color: #fb8500;

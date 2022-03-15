@@ -3,6 +3,7 @@
   border-top: 1px solid #ccc;
   padding-top: 1rem;
   background-color: #f8f8f8;
-  position: absolute;
+  position: fixed;
   bottom: 0;
+  padding-bottom: 1.2rem;
 }
