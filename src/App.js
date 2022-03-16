@@ -6,6 +6,7 @@ import { Route, Routes } from "react-router-dom";
 
 import "./App.css";
 import ContactDetail from "./components/ContactDetail/ContactDetail";
+import axios from "axios";
 
 function App() {
   const [contacts, setContacts] = useState([]);
@@ -29,6 +30,12 @@ function App() {
   useEffect(() => {
     const savedContacts = JSON.parse(localStorage.getItem("contacts"));
     if (savedContacts) setContacts(savedContacts);
+    const getContacts = async () => {
+      const { data } = await axios.get("http://localhost:3500/contact");
+      setContacts(data);
+    };
+
+    getContacts();
   }, []);
 
   useEffect(() => {

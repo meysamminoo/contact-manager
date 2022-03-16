@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 const ContactDetail = () => {
   const location = useLocation();
   const { name, email } = location.state.contact;
-  console.log(name, email);
+
   return (
     <div>
       <p>contact name is: {name}</p>
