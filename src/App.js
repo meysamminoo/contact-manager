@@ -5,6 +5,7 @@ import Layout from "./Layout/Layout";
 import { Route, Routes } from "react-router-dom";
 
 import "./App.css";
+import ContactDetail from "./components/ContactDetail/ContactDetail";
 
 function App() {
   const [contacts, setContacts] = useState([]);
@@ -45,6 +46,7 @@ function App() {
           path="/"
           element={<ContactList contacts={contacts} onRemove={removeHandler} />}
         />
+        <Route path="/user/:id" element={<ContactDetail />} />
       </Routes>
     </Layout>
   );

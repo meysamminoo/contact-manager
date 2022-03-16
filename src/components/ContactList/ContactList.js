@@ -1,4 +1,4 @@
-import Contact from "../Contact/Contact";
+import Contact from "./Contact/Contact";
 import styles from "./ContactList.module.css";
 import { Link } from "react-router-dom";
 
@@ -14,8 +14,7 @@ const ContactList = ({ contacts, onRemove }) => {
       {contacts.map((contact) => (
         <Contact
           key={contact.id}
-          name={contact.name}
-          email={contact.email}
+          contact={contact}
           onRemove={() => onRemove(contact.id)}
         />
       ))}
