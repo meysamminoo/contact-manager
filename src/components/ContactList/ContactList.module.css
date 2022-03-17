@@ -5,3 +5,25 @@
   align-items: center;
   margin-bottom: 100px;
 }
+
+.head {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 10px 0;
+}
+.head button {
+  background-color: #fb8500;
+  color: #fff;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  transition: all 0.4s ease;
+  padding: 5px 10px;
+}
+.head button:hover {
+  background-color: #fff;
+  color: #023047;
+  border: 1px solid #fb8500;
+}

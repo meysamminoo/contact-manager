@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const ContactList = ({ contacts, onRemove }) => {
   return (
     <section className={styles.contactList}>
-      <div>
+      <div className={styles.head}>
         <h2>Contacts</h2>
         <Link to="/add">
           <button>Add Contact</button>
