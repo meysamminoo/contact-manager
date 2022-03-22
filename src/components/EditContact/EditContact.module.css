@@ -1,0 +1,43 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 800px;
+  border-bottom: 1px solid #ccc;
+}
+.form button {
+  background-color: #fb8500;
+  color: #fff;
+  padding: 10px 15px;
+  margin: 20px 0;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  transition: all 0.4s ease;
+  font-size: 1.2rem;
+}
+.form button:hover {
+  background-color: transparent;
+  border: 2px solid #fb8500;
+  color: #023047;
+}
+.formControl {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  align-items: flex-start;
+}
+.formControl label {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.formControl input {
+  width: 500px;
+  padding: 10px 15px;
+  border: 2px solid transparent;
+  font-size: 1.2rem;
+}
+
+.formControl input:focus {
+  border: 2px solid #fb8500;
+}

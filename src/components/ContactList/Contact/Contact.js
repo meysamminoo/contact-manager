@@ -1,6 +1,6 @@
 import styles from "./Contact.module.css";
 import userImage from "../../../assets/images/user.png";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const Contact = ({ contact, onRemove }) => {
   const { name, email, id } = contact;
@@ -17,7 +17,12 @@ const Contact = ({ contact, onRemove }) => {
           </div>
         </Link>
       </div>
-      <button onClick={onRemove}>Remove</button>
+      <div>
+        <Link to={`/edit/${id}`} state={{ contact }}>
+          <button className={styles.edit}>Edit</button>
+        </Link>
+        <button onClick={onRemove}>Remove</button>
+      </div>
     </div>
   );
 };

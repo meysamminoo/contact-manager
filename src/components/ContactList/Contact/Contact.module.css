@@ -35,3 +35,14 @@
   color: #dc143c;
   border: 1px solid #dc143c;
 }
+
+.contact .edit {
+  background-color: #fb8500;
+  color: #fff;
+  margin-right: 15px;
+}
+.contact .edit:hover {
+  background-color: #fff;
+  color: #023047;
+  border: 1px solid #fb8500;
+}

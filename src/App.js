@@ -10,7 +10,10 @@ import {
   getContacts,
   deleteOneContact,
   addOneContact,
+  updatedContact,
 } from "./services/ContactsServices";
+import EditContact from "./components/EditContact/EditContact";
+
 function App() {
   const [contacts, setContacts] = useState([]);
 
@@ -26,6 +29,14 @@ function App() {
       await deleteOneContact(id);
       const filteredContacts = contacts.filter((contact) => contact.id !== id);
       setContacts(filteredContacts);
+    } catch (error) {}
+  };
+
+  const editContactHandler = async (id, contact) => {
+    try {
+      await updatedContact(id, contact);
+      const { data } = await getContacts();
+      setContacts(data);
     } catch (error) {}
   };
 
@@ -52,6 +63,10 @@ function App() {
           element={<ContactList contacts={contacts} onRemove={removeHandler} />}
         />
         <Route path="/user/:id" element={<ContactDetail />} />
+        <Route
+          path="/edit/:id"
+          element={<EditContact editContactHandler={editContactHandler} />}
+        />
       </Routes>
     </Layout>
   );
