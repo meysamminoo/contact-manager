@@ -27,3 +27,18 @@
   color: #023047;
   border: 1px solid #fb8500;
 }
+.searchBox {
+  width: 40%;
+  margin: 1rem 0;
+}
+.search {
+  width: 100%;
+  height: 40px;
+  padding: 1rem;
+  border: 2px solid transparent;
+  background-color: #eee;
+  font-size: 20px;
+}
+.search:focus {
+  border: 2px solid #fb8500;
+}
