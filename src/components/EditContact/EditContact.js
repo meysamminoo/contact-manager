@@ -1,9 +1,13 @@
 import { useState, useEffect } from "react";
 import styles from "./EditContact.module.css";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
-import { getOneContacts } from "../../services/ContactsServices";
+import { useLocation, useNavigate } from "react-router-dom";
+import {
+  getContacts,
+  getOneContacts,
+  updatedContact,
+} from "../../services/ContactsServices";
 
-const EditContact = ({ editContactHandler }) => {
+const EditContact = () => {
   const [contact, setContact] = useState({ name: "", email: "" });
   const navigate = useNavigate();
   const location = useLocation();
@@ -24,15 +28,17 @@ const EditContact = ({ editContactHandler }) => {
     setContact({ ...contact, [e.target.name]: e.target.value });
   };
 
-  const submitHandler = (e) => {
+  const submitHandler = async (e) => {
     if (!contact.name || !contact.email) {
       alert(" Please, fill in the feilds");
       return;
     }
     e.preventDefault();
-    editContactHandler(getID, contact);
-    setContact({ name: "", email: "" });
-    navigate("/");
+    try {
+      await updatedContact(getID, contact);
+      await getContacts();
+      navigate("/");
+    } catch (error) {}
   };
 
   return (

@@ -21,7 +21,7 @@ const Contact = ({ contact, onRemove }) => {
         <Link to={`/edit/${id}`} state={{ contact }}>
           <button className={styles.edit}>Edit</button>
         </Link>
-        <button onClick={onRemove}>Remove</button>
+        <button onClick={() => onRemove(id)}>Remove</button>
       </div>
     </div>
   );
